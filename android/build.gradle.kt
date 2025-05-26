@@ -6,27 +6,6 @@ plugins {
 group = "co.paystack.flutterpaystack"
 version = "1.0-SNAPSHOT"
 
-buildscript {
-    val kotlin_version by extra("1.7.20")
-
-    repositories {
-        google()
-        mavenCentral()
-    }
-
-    dependencies {
-        classpath("com.android.tools.build:gradle:7.4.0-rc02")
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
-    }
-}
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
-
 android {
     compileSdk = 32
 
@@ -47,6 +26,11 @@ android {
     lint {
         disable += "InvalidPackage"
     }
+}
+
+repositories {
+    google()
+    mavenCentral()
 }
 
 dependencies {
